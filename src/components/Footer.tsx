@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import { Facebook, Twitter, Instagram } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -87,14 +88,14 @@ export function Footer() {
               Junte-se à nossa comunidade e fique por dentro dos últimos anúncios.
             </p>
             <div className="flex space-x-4">
-              <Link to="#" className="text-foreground hover:text-primary transition-colors">
-                Facebook
+              <Link to="#" className="text-foreground hover:text-[#1877F2] transition-colors">
+                <Facebook className="h-5 w-5" />
               </Link>
-              <Link to="#" className="text-foreground hover:text-primary transition-colors">
-                Twitter
+              <Link to="#" className="text-foreground hover:text-[#1DA1F2] transition-colors">
+                <Twitter className="h-5 w-5" />
               </Link>
-              <Link to="#" className="text-foreground hover:text-primary transition-colors">
-                Instagram
+              <Link to="#" className="text-foreground hover:text-[#E4405F] transition-colors">
+                <Instagram className="h-5 w-5" />
               </Link>
             </div>
           </div>

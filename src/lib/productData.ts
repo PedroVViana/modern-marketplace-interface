@@ -1,4 +1,3 @@
-
 export interface Product {
   id: string;
   title: string;
@@ -53,7 +52,7 @@ export const products: Product[] = [
     title: 'Toyota Corolla 2021 - 45.000km - Completo',
     price: 105800,
     location: 'Belo Horizonte, MG',
-    image: 'https://images.unsplash.com/photo-1623019569540-1a3731e447e0?q=80&w=500',
+    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=500',
     description: 'Toyota Corolla 2021 com apenas 45.000km. Único dono, todas as revisões feitas na concessionária. Estado impecável, sem acidentes. Pacote completo incluindo teto solar e bancos de couro.',
     date: '2023-05-08',
     category: 'vehicles',
@@ -206,4 +205,3 @@ export const products: Product[] = [
     },
   },
 ];
-
