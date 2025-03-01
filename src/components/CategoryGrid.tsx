@@ -11,13 +11,13 @@ interface Category {
 
 export function CategoryGrid() {
   const categories: Category[] = [
-    { id: 'electronics', name: 'Electronics', icon: <Search className="h-6 w-6" />, count: 1243 },
-    { id: 'vehicles', name: 'Vehicles', icon: <Search className="h-6 w-6" />, count: 872 },
-    { id: 'property', name: 'Property', icon: <Search className="h-6 w-6" />, count: 543 },
-    { id: 'jobs', name: 'Jobs', icon: <Search className="h-6 w-6" />, count: 321 },
-    { id: 'furniture', name: 'Furniture', icon: <Search className="h-6 w-6" />, count: 765 },
-    { id: 'fashion', name: 'Fashion', icon: <Search className="h-6 w-6" />, count: 987 },
-    { id: 'services', name: 'Services', icon: <Search className="h-6 w-6" />, count: 432 },
+    { id: 'electronics', name: 'Eletrônicos', icon: <Search className="h-6 w-6" />, count: 1243 },
+    { id: 'vehicles', name: 'Veículos', icon: <Search className="h-6 w-6" />, count: 872 },
+    { id: 'property', name: 'Imóveis', icon: <Search className="h-6 w-6" />, count: 543 },
+    { id: 'jobs', name: 'Empregos', icon: <Search className="h-6 w-6" />, count: 321 },
+    { id: 'furniture', name: 'Móveis', icon: <Search className="h-6 w-6" />, count: 765 },
+    { id: 'fashion', name: 'Moda', icon: <Search className="h-6 w-6" />, count: 987 },
+    { id: 'services', name: 'Serviços', icon: <Search className="h-6 w-6" />, count: 432 },
     { id: 'hobbies', name: 'Hobbies', icon: <Search className="h-6 w-6" />, count: 678 },
   ];
 
@@ -26,10 +26,10 @@ export function CategoryGrid() {
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Browse By Category
+            Navegue por Categoria
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Find what you need in our curated categories
+            Encontre o que você precisa em nossas categorias selecionadas
           </p>
         </div>
         
@@ -53,7 +53,7 @@ export function CategoryGrid() {
                 {category.name}
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">
-                {category.count} listings
+                {category.count} anúncios
               </p>
             </Link>
           ))}

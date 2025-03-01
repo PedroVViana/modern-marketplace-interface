@@ -10,18 +10,18 @@ export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const [isImageZoomed, setIsImageZoomed] = useState(false);
   
-  // Find the product with the matching ID
+  // Encontrar o produto com o ID correspondente
   const product = products.find(p => p.id === id);
   
-  // If product not found, render a message
+  // Se o produto não for encontrado, exibe uma mensagem
   if (!product) {
     return (
       <Layout>
         <div className="container py-12 text-center">
-          <h1 className="text-2xl font-bold mb-4">Product Not Found</h1>
-          <p className="text-muted-foreground mb-6">The product you're looking for doesn't exist or has been removed.</p>
+          <h1 className="text-2xl font-bold mb-4">Produto Não Encontrado</h1>
+          <p className="text-muted-foreground mb-6">O produto que você está procurando não existe ou foi removido.</p>
           <Button asChild>
-            <Link to="/">Back to Home</Link>
+            <Link to="/">Voltar à Página Inicial</Link>
           </Button>
         </div>
       </Layout>
@@ -35,12 +35,12 @@ export default function ProductDetail() {
         <div className="mb-6">
           <Link to="/" className="text-sm text-muted-foreground hover:text-foreground flex items-center">
             <ChevronLeft className="h-4 w-4 mr-1" />
-            Back to listings
+            Voltar aos anúncios
           </Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Product Images */}
+          {/* Imagens do Produto */}
           <div className="md:col-span-2">
             <div 
               className={`relative rounded-lg overflow-hidden bg-muted ${isImageZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
@@ -55,21 +55,21 @@ export default function ProductDetail() {
               </div>
             </div>
             
-            {/* Product Description */}
+            {/* Descrição do Produto */}
             <div className="mt-8">
-              <h2 className="text-xl font-semibold mb-4">Description</h2>
+              <h2 className="text-xl font-semibold mb-4">Descrição</h2>
               <p className="text-muted-foreground">
-                {product.description || 'No description provided.'}
+                {product.description || 'Nenhuma descrição fornecida.'}
               </p>
             </div>
           </div>
           
-          {/* Product Info & Actions */}
+          {/* Informações e Ações do Produto */}
           <div className="space-y-6">
             <div className="rounded-lg border border-border p-6 space-y-4">
               <div className="space-y-1">
                 <h1 className="text-2xl font-bold">{product.title}</h1>
-                <p className="text-muted-foreground text-sm">{product.location} • Posted on {product.date}</p>
+                <p className="text-muted-foreground text-sm">{product.location} • Publicado em {product.date}</p>
               </div>
               
               <div className="pt-4 border-t border-border">
@@ -79,11 +79,11 @@ export default function ProductDetail() {
               <div className="pt-4 flex flex-col space-y-3">
                 <Button className="w-full" size="lg">
                   <MessageCircle className="h-4 w-4 mr-2" />
-                  Chat with Seller
+                  Conversar com Vendedor
                 </Button>
                 <Button variant="outline" className="w-full" size="lg">
                   <Phone className="h-4 w-4 mr-2" />
-                  Show Phone Number
+                  Mostrar Telefone
                 </Button>
                 <div className="flex gap-3 pt-2">
                   <Button variant="ghost" size="icon" className="flex-1">
@@ -96,7 +96,7 @@ export default function ProductDetail() {
               </div>
             </div>
             
-            {/* Seller Info */}
+            {/* Informações do Vendedor */}
             <div className="rounded-lg border border-border p-6">
               <div className="flex items-center space-x-4">
                 <div className="bg-muted rounded-full p-3">
@@ -104,24 +104,24 @@ export default function ProductDetail() {
                 </div>
                 <div>
                   <h3 className="font-medium">{product.seller.name}</h3>
-                  <p className="text-sm text-muted-foreground">Member since {product.seller.memberSince}</p>
+                  <p className="text-sm text-muted-foreground">Membro desde {product.seller.memberSince}</p>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-border">
                 <p className="text-sm">
-                  Seller rating: <span className="font-medium">{product.seller.rating} / 5</span>
+                  Avaliação do vendedor: <span className="font-medium">{product.seller.rating} / 5</span>
                 </p>
                 <Button variant="outline" className="w-full mt-4">
-                  See all ads by this seller
+                  Ver todos os anúncios deste vendedor
                 </Button>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Similar Products */}
+        {/* Produtos Similares */}
         <div className="mt-16">
-          <h2 className="text-xl font-semibold mb-6">Similar Products</h2>
+          <h2 className="text-xl font-semibold mb-6">Produtos Similares</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {products
               .filter(p => p.category === product.category && p.id !== product.id)

@@ -9,21 +9,21 @@ export function Hero() {
         <div className="relative z-10 mx-auto max-w-3xl">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground animate-slide-down">
-              <span className="block">Buy and sell with ease</span>
-              <span className="block text-primary mt-2">directly in your area</span>
+              <span className="block">Compre e venda com facilidade</span>
+              <span className="block text-primary mt-2">diretamente na sua região</span>
             </h1>
             <p className="mt-6 text-balance text-lg leading-8 text-muted-foreground max-w-2xl mx-auto animate-slide-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-              Discover thousands of items near you. From electronics to vehicles, find exactly what you need at the best prices.
+              Descubra milhares de itens perto de você. De eletrônicos a veículos, encontre exatamente o que você precisa pelos melhores preços.
             </p>
             <div className="mt-10 flex items-center justify-center gap-6 animate-slide-up opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
               <Button asChild size="lg" className="rounded-full">
                 <Link to="/post-ad">
-                  Post Your Ad
+                  Anuncie seu Produto
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full">
                 <Link to="/browse">
-                  Browse Items
+                  Explorar Itens
                 </Link>
               </Button>
             </div>

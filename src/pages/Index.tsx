@@ -8,9 +8,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 export default function Index() {
-  // Get featured products
+  // Obter produtos em destaque
   const featuredProducts = products.filter(product => product.isPromoted);
-  // Get recent products (excluding featured)
+  // Obter produtos recentes (excluindo os em destaque)
   const recentProducts = products
     .filter(product => !product.isPromoted)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -20,20 +20,20 @@ export default function Index() {
       <Hero />
       <CategoryGrid />
       
-      {/* Featured Products */}
+      {/* Produtos em Destaque */}
       <section className="py-12 bg-gradient-to-b from-background to-secondary/20">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-foreground">
-                Featured Products
+                Produtos em Destaque
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Handpicked items that you might love
+                Itens selecionados que você pode gostar
               </p>
             </div>
             <Button asChild variant="outline" className="mt-4 sm:mt-0">
-              <Link to="/browse">View All</Link>
+              <Link to="/browse">Ver Todos</Link>
             </Button>
           </div>
           
@@ -55,20 +55,20 @@ export default function Index() {
         </div>
       </section>
       
-      {/* Recent Products */}
+      {/* Produtos Recentes */}
       <section className="py-12">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-foreground">
-                Recent Products
+                Produtos Recentes
               </h2>
               <p className="mt-2 text-muted-foreground">
-                The latest items from our marketplace
+                Os itens mais recentes do nosso marketplace
               </p>
             </div>
             <Button asChild variant="outline" className="mt-4 sm:mt-0">
-              <Link to="/browse">View All</Link>
+              <Link to="/browse">Ver Todos</Link>
             </Button>
           </div>
           
@@ -90,25 +90,25 @@ export default function Index() {
           
           <div className="mt-10 text-center">
             <Button asChild size="lg">
-              <Link to="/browse">Load More</Link>
+              <Link to="/browse">Carregar Mais</Link>
             </Button>
           </div>
         </div>
       </section>
       
-      {/* CTA Section */}
+      {/* Seção CTA */}
       <section className="py-16 bg-primary/5">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground">
-              Ready to sell your items?
+              Pronto para vender seus itens?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              List your items for free and reach thousands of buyers in your area
+              Anuncie seus itens gratuitamente e alcance milhares de compradores na sua região
             </p>
             <div className="mt-8">
               <Button asChild size="lg" className="rounded-full px-8">
-                <Link to="/post-ad">Post Your Ad Now</Link>
+                <Link to="/post-ad">Anuncie Agora</Link>
               </Button>
             </div>
           </div>
