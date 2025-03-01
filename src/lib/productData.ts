@@ -49,13 +49,13 @@ export const products: Product[] = [
   },
   {
     id: '3',
-    title: 'Toyota Corolla 2021 - 45.000km - Completo',
-    price: 105800,
+    title: 'Notebook Dell Inspiron 15 - 16GB RAM - SSD 512GB',
+    price: 4299,
     location: 'Belo Horizonte, MG',
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=500',
-    description: 'Toyota Corolla 2021 com apenas 45.000km. Único dono, todas as revisões feitas na concessionária. Estado impecável, sem acidentes. Pacote completo incluindo teto solar e bancos de couro.',
+    image: 'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=500',
+    description: 'Notebook Dell Inspiron 15 com processador Intel Core i7, 16GB de RAM, SSD de 512GB. Apenas 6 meses de uso, em perfeito estado. Acompanha carregador original e mochila para transporte.',
     date: '2023-05-08',
-    category: 'vehicles',
+    category: 'electronics',
     isPromoted: true,
     seller: {
       name: 'Roberto S.',
